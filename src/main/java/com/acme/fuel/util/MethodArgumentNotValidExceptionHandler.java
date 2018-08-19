@@ -23,7 +23,7 @@ public class MethodArgumentNotValidExceptionHandler extends ResponseEntityExcept
     protected ResponseEntity<Object> handleMethodArgumentNotValid(final MethodArgumentNotValidException ex, final HttpHeaders headers, final HttpStatus status, final WebRequest request) {
         logger.info(ex.getClass().getName());
 
-        final List<String> errors = new ArrayList<String>();
+        final List<String> errors = new ArrayList<>();
         for (final FieldError error : ex.getBindingResult().getFieldErrors()) {
             errors.add(error.getField() + ": " + error.getDefaultMessage());
         }

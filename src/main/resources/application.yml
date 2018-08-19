@@ -1,0 +1,22 @@
+spring
+  profiles=default
+  datasource
+    url=jdbc:h2:mem:testdb
+
+---
+
+spring
+  profiles=dev
+  datasource
+    url=jdbc:h2:file:~/dev
+  jpa
+    hibernate
+      ddl-auto=validate
+      
+---
+
+spring
+  profiles=prod
+  datasource
+    url=jdbc:h2:file:~/prod
+    

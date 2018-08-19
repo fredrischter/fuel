@@ -30,7 +30,5 @@ public class Consumption {
 	LocalDateTime date;
 	
 	Long price;
-	
-	Long totalPrice;
 
 }

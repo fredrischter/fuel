@@ -2,6 +2,8 @@ package com.acme.fuel.rest;
 
 import java.time.LocalDate;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,7 +36,7 @@ public class ConsumptionRest {
 	}
 
 	@PostMapping()
-	public void create(@RequestBody Consumption consumption) {
+	public void create(@RequestBody @Valid Consumption consumption) {
 		service.create(consumption);
 	}
 

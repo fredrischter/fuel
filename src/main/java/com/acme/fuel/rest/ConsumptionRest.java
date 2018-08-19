@@ -15,35 +15,39 @@ import org.springframework.web.bind.annotation.RestController;
 import com.acme.fuel.model.Consumption;
 import com.acme.fuel.service.ConsumptionService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
 @RequestMapping(path = "/consumption")
+@Api(value = "consumption", description = "Operations on consumption register")
 public class ConsumptionRest {
 
-    @Autowired
-    private ConsumptionService service;
+	@Autowired
+	private ConsumptionService service;
 
-    @GetMapping
-    @RequestMapping(path = "/{id}")
-    public Consumption get(@PathVariable Long id) {
-        return service.retrieve(id);
-    }
+	@GetMapping(path = "/{id}")
+	public Consumption retrieve(@PathVariable Long id) {
+		return service.retrieve(id);
+	}
 
-    @PostMapping
-    @RequestMapping
-    public void list(@RequestBody Consumption consumption) {
-        service.create(consumption);
-    }
+	@PostMapping()
+	public void create(@RequestBody Consumption consumption) {
+		service.create(consumption);
+	}
 
-    @PostMapping
-    @RequestMapping(path = "/list")
-    public Iterable<Consumption> list() {
-        return service.list();
-    }
+	@ApiOperation(value = "View a list of consumptions", response = Iterable.class)
+	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successfully retrieved list") })
+	@GetMapping(path = "/list")
+	public Iterable<Consumption> list() {
+		return service.list();
+	}
 
-    @GetMapping
-    @RequestMapping(path = "/month")
-    public int byMonth(@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate month) {
-        return service.byMonth(month);
-    }
+	@GetMapping(path = "/month")
+	public int byMonth(@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate month) {
+		return service.byMonth(month);
+	}
 
 }

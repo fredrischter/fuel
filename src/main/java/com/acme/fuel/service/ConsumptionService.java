@@ -1,19 +1,16 @@
 package com.acme.fuel.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.acme.fuel.model.Consumption;
-import com.acme.fuel.repository.ConsumptionRepository;
 
 @Service
-public class ConsumptionService {
+public interface ConsumptionService {
 	
-	@Autowired
-	ConsumptionRepository repository;
+	public Consumption retrieve(Long id);
 
-	public Iterable<Consumption> findAll() {
-		return repository.findAll();
-	}
+	public void create(Consumption consumption);
+
+	public Iterable<Consumption> list();
 
 }

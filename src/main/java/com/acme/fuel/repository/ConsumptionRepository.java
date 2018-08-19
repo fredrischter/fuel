@@ -7,6 +7,7 @@ import com.acme.fuel.model.Consumption;
 
 public interface ConsumptionRepository extends CrudRepository<Consumption, Long> {
 	
-	@Query("SELECT avg(c.price) from Consumption c")
+	@Query("SELECT avg(c.pricePerLitter) from Consumption c")
 	Integer getAverage();
+
 }

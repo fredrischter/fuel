@@ -21,14 +21,16 @@ public class Consumption {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-	Long driverId;
+    Long id;
     
 	String fuelType;
 	
-	Long volume;
+	Long pricePerLitter;
+	
+	Long volumeInLitters;
 	
 	LocalDateTime date;
-	
-	Long price;
 
+	Long driverId;
+	
 }

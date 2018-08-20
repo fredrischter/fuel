@@ -5,7 +5,7 @@ Fuel Consumption API
 
 Register new consumption
 
-curl -X POST http://localhost:8080/consumption/ --header "Content-Type: application/json" -d "{\"driverId\":\"1234\", \"fuelType\": \"REGULAR\", \"volumeInLitters\": 1000, \"date\": \"2018-07-06T10:20:30\", \"pricePerLitter\": 30 }" -i
+curl -X POST "http://localhost:8080/consumption" -H "Content-Type: application/json" -d "{ \"date\": \"2018-09-01T10:01:12\", \"driverId\": 1, \"fuelType\": \"REGULAR\", \"pricePerLitter\": 1, \"volumeInLitters\": 1}" -i
 
 Get consumption register by Id
 

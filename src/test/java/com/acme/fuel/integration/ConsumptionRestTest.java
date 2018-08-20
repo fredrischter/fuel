@@ -1,4 +1,4 @@
-package com.acme.fuel.service;
+package com.acme.fuel.integration;
 
 import static com.jayway.restassured.RestAssured.given;
 

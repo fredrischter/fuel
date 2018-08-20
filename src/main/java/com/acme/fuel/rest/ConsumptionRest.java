@@ -30,11 +30,13 @@ public class ConsumptionRest {
 	@Autowired
 	private ConsumptionService service;
 
+	// TODO Insert more API documentation annotations
 	@GetMapping(path = "/{id}")
 	public Consumption retrieve(@PathVariable Long id) {
 		return service.retrieve(id);
 	}
 
+	// TODO Should return the generated id.
 	@PostMapping()
 	public void create(@RequestBody @Valid Consumption consumption) {
 		service.create(consumption);

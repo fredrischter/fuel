@@ -17,15 +17,15 @@ curl -X GET http://localhost:8080/consumption/list -i
 
 ## Questions and answers
 
-* Why you didn't tested the the repository? *
+* Why you didn't tested the the repository?
 
 Answer: Because it's not good practice to test the framework.
 
-* Why you didn't tested the validation as unit test? *
+* Why you didn't tested the validation as unit test?
 
 Answer: Because it's not good practice to test the framework - used spring default validators by annotations. So I prefer to test the validations in the integration tests.
 
-* Why not an special name for the application? *
+* Why not an special name for the application?
 
 Answer: Just "Fuel" fits well. Made a good banner in order to redress the lack of innovation in the name.
 

@@ -26,8 +26,9 @@ public class ConsumptionServiceImpl implements ConsumptionService {
 	}
 
 	@Override
-	public void create(Consumption consumption) {
-		repository.save(consumption);
+	public Consumption create(Consumption consumption) {
+		Consumption saved = repository.save(consumption);
+		return saved;
 	}
 
 	@Override

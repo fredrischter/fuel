@@ -11,7 +11,7 @@ public interface ConsumptionService {
 	
 	public Consumption retrieve(Long id);
 
-	public void create(Consumption consumption);
+	public Consumption create(Consumption consumption);
 
 	public Iterable<Consumption> list();
 

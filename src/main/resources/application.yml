@@ -1,33 +1,37 @@
 
-spring
-  profiles=default
-  datasource
-    url=jdbc:h2:mem:testdb
+---
+
+spring:
+  profiles: default
+  datasource:
+    url: jdbc:h2:mem:testdb
 
 ---
 
-spring
-  profiles=dev
-  datasource
-    url=jdbc:h2:file:~/dev
-  jpa
-    hibernate
-      ddl-auto=validate
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:h2:file:~/dev
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+---
+
+spring:
+  profiles: integration
+  datasource:
+    url: jdbc:h2:mem:testdb
       
 ---
 
-spring
-  profiles=integration
-  datasource
-    url=jdbc:h2:mem:testdb
-  jpa
-    hibernate
-      ddl-auto=validate
-      
----
-
-spring
-  profiles=prod
-  datasource
-    url=jdbc:h2:file:~/prod
-    
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:h2:file:~/prod
+    username: xyz
+    password: xyz
+    driver-class-name: org.h2.Driver

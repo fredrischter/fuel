@@ -17,6 +17,16 @@ spring
 ---
 
 spring
+  profiles=integration
+  datasource
+    url=jdbc:h2:mem:testdb
+  jpa
+    hibernate
+      ddl-auto=validate
+      
+---
+
+spring
   profiles=prod
   datasource
     url=jdbc:h2:file:~/prod

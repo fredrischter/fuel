@@ -6,9 +6,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan
 @SpringBootApplication
-public class FuelApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FuelApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }

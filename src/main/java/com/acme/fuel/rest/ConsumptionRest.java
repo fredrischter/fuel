@@ -1,18 +1,16 @@
 package com.acme.fuel.rest;
 
-import java.time.LocalDate;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.acme.fuel.model.Consumption;
 import com.acme.fuel.service.ConsumptionService;
@@ -42,16 +40,17 @@ public class ConsumptionRest {
 		service.create(consumption);
 	}
 
+	// TODO Should return the generated ids.
+	@PostMapping(path = "/bulk")
+	public void bulkCreate(@RequestPart(name = "file", required = false) MultipartFile csvFile) {
+		service.bulkCreate(csvFile);
+	}
+
 	@ApiOperation(value = "View a list of consumptions", response = Iterable.class)
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successfully retrieved list") })
 	@GetMapping(path = "/list")
 	public Iterable<Consumption> list() {
 		return service.list();
-	}
-
-	@GetMapping(path = "/month")
-	public int byMonth(@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate month) {
-		return service.byMonth(month);
 	}
 
 }

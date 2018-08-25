@@ -32,7 +32,7 @@ public class Consumption {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     Long id;
 
-	// TODO Make it enum and validated with options REGULAR, PREMIUM
+	// TODO Make it enum and validated with options REGULAR, PREMIUM or let it for a open format, accepting  95, 98 or D for example.
 	@NotEmpty
 	@Pattern(regexp = "^(REGULAR|PREMIUM)$")
 	String fuelType;

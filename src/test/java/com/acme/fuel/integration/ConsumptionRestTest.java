@@ -75,6 +75,6 @@ public class ConsumptionRestTest {
 		
 	}
 	
-	//TODO more tests
+	//TODO more tests, for bulk creation, getter operation and reports
 
 }

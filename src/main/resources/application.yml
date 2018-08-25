@@ -25,13 +25,3 @@ spring:
   profiles: integration
   datasource:
     url: jdbc:h2:mem:testdb
-      
----
-
-spring:
-  profiles: prod
-  datasource:
-    url: jdbc:h2:file:~/prod
-    username: xyz
-    password: xyz
-    driver-class-name: org.h2.Driver

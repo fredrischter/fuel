@@ -9,10 +9,10 @@ import com.acme.fuel.model.reports.MoneyByMonth;
 @Repository
 public interface MoneyByMonthRepository extends JpaRepository<MoneyByMonth, Long> {
 
-	@Query("SELECT 1 as totalSpent, '2018-01-01' as month from Consumption")
+	@Query("SELECT new com.acme.fuel.model.reports.MoneyByMonth(sum(c.pricePerLitter*c.volumeInLitters), year(c.date), month(c.date)) from Consumption c where c.driverId=?1 group by year(c.date), month(c.date)")
 	Iterable<MoneyByMonth> moneyByMonth(Long driverId);
 
-	@Query("SELECT 1 as totalSpent, '2018-01-01' as month from Consumption")
+	@Query("SELECT new com.acme.fuel.model.reports.MoneyByMonth(sum(c.pricePerLitter*c.volumeInLitters), year(c.date), month(c.date)) from Consumption c group by year(c.date), month(c.date)")
 	Iterable<MoneyByMonth> moneyByMonth();
 
 }

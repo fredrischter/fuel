@@ -43,11 +43,45 @@ curl -X GET http://localhost:8080/report/money-by-month -i
 
 curl -X GET http://localhost:8080/report/money-by-month?driverId=3 -i
 
+[
+	{
+		totalSpent: 189,
+		month: "2018-02"
+	},
+	{
+		totalSpent: 201,
+		month: "2018-03"
+	},
+	{
+		totalSpent: 213,
+		month: "2018-04"
+	}
+]
+
 ### consumption records by month
 
-curl -X GET http://localhost:8080/report/consumption-by-month/2018/2 -i
+curl -X GET http://localhost:8080/report/consumption-by-month/2018/02 -i
 
-curl -X GET http://localhost:8080/report/consumption-by-month/2018/2?driverId=3 -i
+curl -X GET http://localhost:8080/report/consumption-by-month/2018/04?driverId=4 -i
+
+[
+	{
+		fuelType: "REGULAR",
+		volumeInLitters: 4,
+		date: "2018-04-01T10:01:12",
+		price: 45,
+		totalPrice: 180,
+		driverId: 4
+	},
+	{
+		fuelType: "REGULAR",
+		volumeInLitters: 4,
+		date: "2018-04-01T10:01:12",
+		price: 46,
+		totalPrice: 184,
+		driverId: 4
+	}
+]
 
 ### consumption records by fuel type
 

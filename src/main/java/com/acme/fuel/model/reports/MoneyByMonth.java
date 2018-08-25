@@ -27,4 +27,8 @@ public class MoneyByMonth {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DATE_FORMAT)
 	LocalDateTime month;
 	
+	public MoneyByMonth(Long totalSpent, int year, int month) {
+		this.totalSpent = totalSpent;
+		this.month = LocalDateTime.of(year, month, 1, 0, 0);
+	}
 }

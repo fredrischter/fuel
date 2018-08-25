@@ -62,13 +62,12 @@ public class ConsumptionServiceImpl implements ConsumptionService {
 
 	@Override
 	public Consumption create(Consumption consumption) {
-		Consumption saved = repository.save(consumption);
-		return saved;
+		return repository.save(consumption);
 	}
 
 	@Override
 	public Iterable<Consumption> list() {
-		return repository.findByDriverId(10l);//findAll();
+		return repository.findAll();
 	}
 	
 	@Override
@@ -89,7 +88,7 @@ public class ConsumptionServiceImpl implements ConsumptionService {
 	    	throw new BulkCreationValidationError(result);
 	    }
 		
-		List<Consumption> createdList = new ArrayList<Consumption>();
+		List<Consumption> createdList = new ArrayList<>();
 		for (Consumption consumption : consumptionList) {
 			createdList.add(repository.save(consumption));
 		}

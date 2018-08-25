@@ -17,7 +17,7 @@ public class ConsumptionListFactory {
 	public List<Consumption> create(MultipartFile csvFile) throws IOException {
 		String stringFile = new String(csvFile.getBytes());
 		String[] lines = stringFile.split("\n");
-		List<Consumption> product = new ArrayList<Consumption>();
+		List<Consumption> product = new ArrayList<>();
 		
 		for (String line : lines) {
 			product.add(lineToObject(line));

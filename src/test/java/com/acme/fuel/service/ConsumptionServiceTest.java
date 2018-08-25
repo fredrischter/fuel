@@ -45,7 +45,7 @@ public class ConsumptionServiceTest {
 		response.forEach(list::add);
 		
 		// Then
-		assertEquals(list.size(), 3);
+		assertEquals(3, list.size());
 	}
 	
 	// TODO more unit tests

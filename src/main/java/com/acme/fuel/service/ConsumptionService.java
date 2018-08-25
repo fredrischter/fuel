@@ -23,7 +23,7 @@ public interface ConsumptionService {
 
 	public Iterable<MoneyByMonth> moneyByMonth(Long driverId);
 
-	public Iterable<MonthlyConsumption> consumptionByMonth(Long driverId);
+	public Iterable<MonthlyConsumption> consumptionByMonth(Integer year, Integer month, Long driverId);
 
 	public Iterable<ConsumptionByFuelType> consumptionByFuelType(Long driverId);
 }

@@ -24,7 +24,7 @@ public class ConsumptionByFuelType {
 	@Id
 	String fuelType;
 	
-	Long volume;
+	Long volumeInLitters;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DATE_FORMAT)
 	LocalDateTime month;

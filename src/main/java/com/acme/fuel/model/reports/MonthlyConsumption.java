@@ -23,7 +23,7 @@ public class MonthlyConsumption {
 
 	String fuelType;
 	
-	Long volume;
+	Long volumeInLitters;
 
 	@Id
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DATE_FORMAT)

@@ -37,12 +37,6 @@ REGULAR;1;2;2018-09-01T10:01:12;2
 
 curl -X POST -F 'file=@src/test/resources/bulkfuel2.csv' "http://localhost:8080/consumption/bulk" -i
 
-### total spent amount of money grouped by month
-
-curl -X GET http://localhost:8080/report/total-spend-by-month/2018/2 -i
-
-curl -X GET http://localhost:8080/report/total-spend-by-month/2018/2?driverId=3 -i
-
 ### money by month
 
 curl -X GET http://localhost:8080/report/money-by-month -i
@@ -51,9 +45,9 @@ curl -X GET http://localhost:8080/report/money-by-month?driverId=3 -i
 
 ### consumption records by month
 
-curl -X GET http://localhost:8080/report/consumption-by-month-i
+curl -X GET http://localhost:8080/report/consumption-by-month/2018/2 -i
 
-curl -X GET http://localhost:8080/report/consumption-by-month?driverId=3 -i
+curl -X GET http://localhost:8080/report/consumption-by-month/2018/2?driverId=3 -i
 
 ### consumption records by fuel type
 

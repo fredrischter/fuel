@@ -11,7 +11,6 @@ public interface ConsumptionByFuelTypeRepository extends JpaRepository<Consumpti
 	
 	@Query("SELECT 'REGULAR' as fuelType, 1 as volume, '2018-01-01' as month, 1 as averagePrice, 2 as totalPrice from Consumption")
 	Iterable<ConsumptionByFuelType> consumptionByFuelType(Long driverId);
-	//fuelType,volume,month,averagePrice,totalPrice
 
 	@Query("SELECT 'REGULAR' as fuelType, 1 as volume, '2018-01-01' as month, 1 as averagePrice, 2 as totalPrice from Consumption")
 	Iterable<ConsumptionByFuelType> consumptionByFuelType();

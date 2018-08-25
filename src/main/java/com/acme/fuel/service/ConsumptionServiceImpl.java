@@ -1,6 +1,7 @@
 package com.acme.fuel.service;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -105,12 +106,20 @@ public class ConsumptionServiceImpl implements ConsumptionService {
 	}
 
 	@Override
-	public Iterable<MonthlyConsumption> consumptionByMonth(Long driverId) {
+	public Iterable<MonthlyConsumption> consumptionByMonth(Integer year, Integer month, Long driverId) {
 		if (driverId != null) {
-			return consumptionByMonthRepository.consumptionByMonth(driverId);
+			return consumptionByMonthRepository.consumptionByMonth(startOfMonth(year, month), endOfMonth(year, month), driverId);
 		} else {
-			return consumptionByMonthRepository.consumptionByMonth();
+			return consumptionByMonthRepository.consumptionByMonth(startOfMonth(year, month), endOfMonth(year, month));
 		}
+	}
+
+	private LocalDateTime startOfMonth(Integer year, Integer month) {
+		return LocalDateTime.of(year, month, 1, 0, 0);
+	}
+
+	private LocalDateTime endOfMonth(Integer year, Integer month) {
+		return LocalDateTime.of(year, month, 1, 0, 0).plusMonths(1l);
 	}
 
 	@Override

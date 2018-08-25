@@ -87,7 +87,97 @@ curl -X GET http://localhost:8080/report/consumption-by-month/2018/04?driverId=4
 
 curl -X GET http://localhost:8080/report/consumption-by-fuel-type -i
 
+[
+	{
+		fuelType: "PREMIUM",
+		volumeInLitters: 6,
+		month: "2018-04",
+		averagePrice: 26,
+		totalPrice: 176
+	},
+	{
+		fuelType: "REGULAR",
+		volumeInLitters: 24,
+		month: "2018-02",
+		averagePrice: 35.57142857142857,
+		totalPrice: 993
+	},
+	{
+		fuelType: "REGULAR",
+		volumeInLitters: 24,
+		month: "2018-03",
+		averagePrice: 37.57142857142857,
+		totalPrice: 1041
+	},
+	{
+		fuelType: "REGULAR",
+		volumeInLitters: 24,
+		month: "2018-04",
+		averagePrice: 39.57142857142857,
+		totalPrice: 1089
+	},
+	{
+		fuelType: "PREMIUM",
+		volumeInLitters: 6,
+		month: "2018-02",
+		averagePrice: 22,
+		totalPrice: 152
+	},
+	{
+		fuelType: "PREMIUM",
+		volumeInLitters: 6,
+		month: "2018-03",
+		averagePrice: 24,
+		totalPrice: 164
+	}
+]
+
 curl -X GET http://localhost:8080/report/consumption-by-fuel-type?driverId=3 -i
+
+[
+	{
+		fuelType: "PREMIUM",
+		volumeInLitters: 3,
+		month: "2018-04",
+		averagePrice: 36,
+		totalPrice: 108
+	},
+	{
+		fuelType: "REGULAR",
+		volumeInLitters: 3,
+		month: "2018-02",
+		averagePrice: 31,
+		totalPrice: 93
+	},
+	{
+		fuelType: "REGULAR",
+		volumeInLitters: 3,
+		month: "2018-03",
+		averagePrice: 33,
+		totalPrice: 99
+	},
+	{
+		fuelType: "REGULAR",
+		volumeInLitters: 3,
+		month: "2018-04",
+		averagePrice: 35,
+		totalPrice: 105
+	},
+	{
+		fuelType: "PREMIUM",
+		volumeInLitters: 3,
+		month: "2018-02",
+		averagePrice: 32,
+		totalPrice: 96
+	},
+	{
+		fuelType: "PREMIUM",
+		volumeInLitters: 3,
+		month: "2018-03",
+		averagePrice: 34,
+		totalPrice: 102
+	}
+]
 
 ## Questions and answers
 

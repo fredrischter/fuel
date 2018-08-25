@@ -29,8 +29,15 @@ public class ConsumptionByFuelType {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DATE_FORMAT)
 	LocalDateTime month;
 	
-	Long averagePrice;
+	Double averagePrice;
 
 	Long totalPrice;
-	
+
+	public ConsumptionByFuelType(String fuelType, long volumeInLitters, int year, int month, double averagePrice, long totalPrice) {
+		this.fuelType = fuelType;
+		this.volumeInLitters = volumeInLitters;
+		this.month = LocalDateTime.of(year, month, 1, 0, 0);
+		this.averagePrice = averagePrice;
+		this.totalPrice = totalPrice;
+	}
 }

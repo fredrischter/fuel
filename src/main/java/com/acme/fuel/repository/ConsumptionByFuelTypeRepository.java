@@ -9,10 +9,10 @@ import com.acme.fuel.model.reports.ConsumptionByFuelType;
 @Repository
 public interface ConsumptionByFuelTypeRepository extends JpaRepository<ConsumptionByFuelType, Long> {
 	
-	@Query("SELECT 'REGULAR' as fuelType, 1 as volume, '2018-01-01' as month, 1 as averagePrice, 2 as totalPrice from Consumption")
+	@Query("SELECT new com.acme.fuel.model.reports.ConsumptionByFuelType(c.fuelType, sum(c.volumeInLitters), year(c.date), month(c.date), avg(c.pricePerLitter), sum(c.pricePerLitter*c.volumeInLitters)) from Consumption c where c.driverId=?1 group by c.fuelType, year(c.date), month(c.date)")
 	Iterable<ConsumptionByFuelType> consumptionByFuelType(Long driverId);
 
-	@Query("SELECT 'REGULAR' as fuelType, 1 as volume, '2018-01-01' as month, 1 as averagePrice, 2 as totalPrice from Consumption")
+	@Query("SELECT new com.acme.fuel.model.reports.ConsumptionByFuelType(c.fuelType, sum(c.volumeInLitters), year(c.date), month(c.date), avg(c.pricePerLitter), sum(c.pricePerLitter*c.volumeInLitters)) from Consumption c group by c.fuelType, year(c.date), month(c.date)")
 	Iterable<ConsumptionByFuelType> consumptionByFuelType();
 
 }

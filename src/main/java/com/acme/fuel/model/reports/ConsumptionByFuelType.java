@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Data
-@Entity
+@Entity // TODO We are having a side effect that need to be fixed: this entity is being created by JPA engine, but hasn't to be created, so some solution need to be done to address it, or not.
 public class ConsumptionByFuelType {
 	
     private static final String DATE_FORMAT = "yyyy-MM";

@@ -1,4 +1,4 @@
-package com.acme.fuel.integration;
+package com.acme.fuel.rest;
 
 import static com.jayway.restassured.RestAssured.given;
 
@@ -75,6 +75,6 @@ public class ConsumptionRestTest {
 		
 	}
 	
-	//TODO more tests, for bulk creation, getter operation and reports
+	//TODO more tests, for bulk creation, getter operation
 
 }

@@ -21,9 +21,11 @@ curl -X POST -F 'file=@src/test/resources/bulkfuel1.csv' "http://localhost:8080/
 
 The CSV format must to be like:
 
+```text
 <fuel type>;<price per litter>;<volume in litters>;<date>;<driver>
 <fuel type>;<price per litter>;<volume in litters>;<date>;<driver>
 <fuel type>;<price per litter>;<volume in litters>;<date>;<driver>
+```
 
 Example:
 

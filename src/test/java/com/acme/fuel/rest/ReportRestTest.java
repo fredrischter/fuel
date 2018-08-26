@@ -80,7 +80,7 @@ public class ReportRestTest {
 
 	@Test
 	public void consumptionByMonth() {
-		String expectedJSON = "[{\"fuelType\":\"REGULAR\",\"volumeInLitters\":1,\"date\":\"2018-02-01T10:01:12\",\"price\":11,\"totalPrice\":11,\"driverId\":1},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":1,\"date\":\"2018-02-01T10:01:12\",\"price\":12,\"totalPrice\":12,\"driverId\":1},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":2,\"date\":\"2018-02-01T10:01:12\",\"price\":21,\"totalPrice\":42,\"driverId\":2},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":2,\"date\":\"2018-02-01T10:01:12\",\"price\":22,\"totalPrice\":44,\"driverId\":2},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":3,\"date\":\"2018-02-01T10:01:12\",\"price\":31,\"totalPrice\":93,\"driverId\":3},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":3,\"date\":\"2018-02-01T10:01:12\",\"price\":32,\"totalPrice\":96,\"driverId\":3},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":4,\"date\":\"2018-02-01T10:01:12\",\"price\":41,\"totalPrice\":164,\"driverId\":4},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":4,\"date\":\"2018-02-01T10:01:12\",\"price\":42,\"totalPrice\":168,\"driverId\":4},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":5,\"date\":\"2018-02-01T10:01:12\",\"price\":51,\"totalPrice\":255,\"driverId\":5},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":5,\"date\":\"2018-02-01T10:01:12\",\"price\":52,\"totalPrice\":260,\"driverId\":5}]";
+		String expectedJSON = "[{\"fuelType\":\"REGULAR\",\"volumeInLitters\":11,\"date\":\"2018-02-01T10:01:12\",\"price\":1,\"totalPrice\":11,\"driverId\":1},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":12,\"date\":\"2018-02-01T10:01:12\",\"price\":1,\"totalPrice\":12,\"driverId\":1},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":21,\"date\":\"2018-02-01T10:01:12\",\"price\":2,\"totalPrice\":42,\"driverId\":2},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":22,\"date\":\"2018-02-01T10:01:12\",\"price\":2,\"totalPrice\":44,\"driverId\":2},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":31,\"date\":\"2018-02-01T10:01:12\",\"price\":3,\"totalPrice\":93,\"driverId\":3},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":32,\"date\":\"2018-02-01T10:01:12\",\"price\":3,\"totalPrice\":96,\"driverId\":3},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":41,\"date\":\"2018-02-01T10:01:12\",\"price\":4,\"totalPrice\":164,\"driverId\":4},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":42,\"date\":\"2018-02-01T10:01:12\",\"price\":4,\"totalPrice\":168,\"driverId\":4},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":51,\"date\":\"2018-02-01T10:01:12\",\"price\":5,\"totalPrice\":255,\"driverId\":5},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":52,\"date\":\"2018-02-01T10:01:12\",\"price\":5,\"totalPrice\":260,\"driverId\":5}]";
 
 		given()
 			.port(port)
@@ -94,7 +94,7 @@ public class ReportRestTest {
 
 	@Test
 	public void consumptionByMonthByDriver() {
-		String expectedJSON = "[{\"fuelType\":\"REGULAR\",\"volumeInLitters\":4,\"date\":\"2018-04-01T10:01:12\",\"price\":45,\"totalPrice\":180,\"driverId\":4},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":4,\"date\":\"2018-04-01T10:01:12\",\"price\":46,\"totalPrice\":184,\"driverId\":4}]";
+		String expectedJSON = "[{\"fuelType\":\"REGULAR\",\"volumeInLitters\":45,\"date\":\"2018-04-01T10:01:12\",\"price\":4,\"totalPrice\":180,\"driverId\":4},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":46,\"date\":\"2018-04-01T10:01:12\",\"price\":4,\"totalPrice\":184,\"driverId\":4}]";
 
 		given()
 			.port(port)
@@ -108,7 +108,7 @@ public class ReportRestTest {
 
 	@Test
 	public void consumptionByFuelType() {
-		String expectedJSON = "[{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":6,\"month\":\"2018-04\",\"averagePrice\":26.0,\"totalPrice\":176},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":24,\"month\":\"2018-02\",\"averagePrice\":35.57142857142857,\"totalPrice\":993},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":24,\"month\":\"2018-03\",\"averagePrice\":37.57142857142857,\"totalPrice\":1041},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":24,\"month\":\"2018-04\",\"averagePrice\":39.57142857142857,\"totalPrice\":1089},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":6,\"month\":\"2018-02\",\"averagePrice\":22.0,\"totalPrice\":152},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":6,\"month\":\"2018-03\",\"averagePrice\":24.0,\"totalPrice\":164}]";
+		String expectedJSON = "[{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":78,\"month\":\"2018-04\",\"averagePrice\":2.0,\"totalPrice\":176},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":249,\"month\":\"2018-02\",\"averagePrice\":3.4285714285714284,\"totalPrice\":993},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":263,\"month\":\"2018-03\",\"averagePrice\":3.4285714285714284,\"totalPrice\":1041},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":277,\"month\":\"2018-04\",\"averagePrice\":3.4285714285714284,\"totalPrice\":1089},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":66,\"month\":\"2018-02\",\"averagePrice\":2.0,\"totalPrice\":152},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":72,\"month\":\"2018-03\",\"averagePrice\":2.0,\"totalPrice\":164}]";
 
 		given()
 			.port(port)
@@ -122,7 +122,7 @@ public class ReportRestTest {
 
 	@Test
 	public void consumptionByFuelTypeByDriver() {
-		String expectedJSON = "[{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":3,\"month\":\"2018-04\",\"averagePrice\":36.0,\"totalPrice\":108},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":3,\"month\":\"2018-02\",\"averagePrice\":31.0,\"totalPrice\":93},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":3,\"month\":\"2018-03\",\"averagePrice\":33.0,\"totalPrice\":99},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":3,\"month\":\"2018-04\",\"averagePrice\":35.0,\"totalPrice\":105},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":3,\"month\":\"2018-02\",\"averagePrice\":32.0,\"totalPrice\":96},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":3,\"month\":\"2018-03\",\"averagePrice\":34.0,\"totalPrice\":102}]";
+		String expectedJSON = "[{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":36,\"month\":\"2018-04\",\"averagePrice\":3.0,\"totalPrice\":108},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":31,\"month\":\"2018-02\",\"averagePrice\":3.0,\"totalPrice\":93},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":33,\"month\":\"2018-03\",\"averagePrice\":3.0,\"totalPrice\":99},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":35,\"month\":\"2018-04\",\"averagePrice\":3.0,\"totalPrice\":105},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":32,\"month\":\"2018-02\",\"averagePrice\":3.0,\"totalPrice\":96},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":34,\"month\":\"2018-03\",\"averagePrice\":3.0,\"totalPrice\":102}]";
 
 		given()
 			.port(port)

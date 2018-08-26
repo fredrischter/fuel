@@ -195,7 +195,7 @@ Answer: Because it's not good practice to test the framework.
 
 * Why you didn't tested the validation as unit test?
 
-Answer: Because it's not good practice to test the framework - used spring default validators by annotations. So I prefer to test the validations in the integration tests.
+Answer: Because it's not good practice to test the framework - used spring default validators by annotations. So I prefer to test the validations in the integration tests, as model test, because I considerar validation part of the model.
 
 * Why not an special name for the application?
 

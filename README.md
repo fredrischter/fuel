@@ -33,6 +33,12 @@ REGULAR;1;1;2018-09-01T10:01:12;1
 REGULAR;2;4;2018-09-01T10:01:12;4
 REGULAR;1;2;2018-09-01T10:01:12;2
 
+## Swagger
+
+Accessing /swagger-ui.html looks like this:
+
+![Swagger](docs/swagger.png)
+
 ## Reports
 
 ### load sample csv number 2

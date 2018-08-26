@@ -29,8 +29,8 @@ public class ConsumptionListFactory {
 		String[] obj = line.split(";");
 		return Consumption.builder()
 				.fuelType(obj[0])
-				.volumeInLitters(Long.parseLong(obj[1]))
-				.pricePerLitter(Long.parseLong(obj[2]))
+				.pricePerLitter(Long.parseLong(obj[1]))
+				.volumeInLitters(Long.parseLong(obj[2]))
 				.date(LocalDateTime.parse(obj[3], DateTimeFormatter.ISO_LOCAL_DATE_TIME))
 				.driverId(Long.parseLong(obj[4]))
 				.build();

@@ -33,11 +33,11 @@ public class ConsumptionByFuelType {
 
 	Long totalPrice;
 
-	public ConsumptionByFuelType(String fuelType, long volumeInLitters, int year, int month, double averagePrice, long totalPrice) {
+	public ConsumptionByFuelType(String fuelType, long volumeInLitters, int year, int month, long totalPrice) {
 		this.fuelType = fuelType;
 		this.volumeInLitters = volumeInLitters;
 		this.month = LocalDateTime.of(year, month, 1, 0, 0);
-		this.averagePrice = averagePrice;
+		this.averagePrice = (double)totalPrice/volumeInLitters;
 		this.totalPrice = totalPrice;
 	}
 }

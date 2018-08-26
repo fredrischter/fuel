@@ -108,7 +108,7 @@ public class ReportRestTest {
 
 	@Test
 	public void consumptionByFuelType() {
-		String expectedJSON = "[{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":78,\"month\":\"2018-04\",\"averagePrice\":2.0,\"totalPrice\":176},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":249,\"month\":\"2018-02\",\"averagePrice\":3.4285714285714284,\"totalPrice\":993},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":263,\"month\":\"2018-03\",\"averagePrice\":3.4285714285714284,\"totalPrice\":1041},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":277,\"month\":\"2018-04\",\"averagePrice\":3.4285714285714284,\"totalPrice\":1089},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":66,\"month\":\"2018-02\",\"averagePrice\":2.0,\"totalPrice\":152},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":72,\"month\":\"2018-03\",\"averagePrice\":2.0,\"totalPrice\":164}]";
+		String expectedJSON = "[{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":78,\"month\":\"2018-04\",\"averagePrice\":2.2564102564102564,\"totalPrice\":176},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":249,\"month\":\"2018-02\",\"averagePrice\":3.9879518072289155,\"totalPrice\":993},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":263,\"month\":\"2018-03\",\"averagePrice\":3.958174904942966,\"totalPrice\":1041},{\"fuelType\":\"REGULAR\",\"volumeInLitters\":277,\"month\":\"2018-04\",\"averagePrice\":3.931407942238267,\"totalPrice\":1089},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":66,\"month\":\"2018-02\",\"averagePrice\":2.303030303030303,\"totalPrice\":152},{\"fuelType\":\"PREMIUM\",\"volumeInLitters\":72,\"month\":\"2018-03\",\"averagePrice\":2.2777777777777777,\"totalPrice\":164}]";
 
 		given()
 			.port(port)
